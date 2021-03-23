@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data数据对象</title>
+    <!--1 引入vue-->
+    <script src="../../static/vue/vue.js"></script>
+</head>
+<body>
+<!--2 定义一个容器,用于挂载vue实例-->
+<div id="app">
+    <!--    通过插值表达式渲染vue-->
+    <h1>{{message}}</h1>
+    <h2>{{school.name}}-{{school.address}}</h2>
+    <lr>
+        <li>{{institute[0]}}</li>
+        <li>{{institute[1]}}</li>
+        <li>{{institute[2]}}</li>
+        <li>{{institute[3]}}</li>
+        <li>{{institute[4]}}</li>
+    </lr>
+</div>
+
+<script>
+    <!--3 创建一个vue实例-->
+    const myapp = new Vue({
+        //通过el把vue实例挂在到指定容器
+        // #app id选择器
+        // .app 类选择器
+        // <  > 标签选择器
+        el:"#app",
+        data:{
+            message:"第一个Vue应用",
+            school:{
+                name:"海滨学院",
+                address:"河北黄骅"
+            },
+            institute:["计算机","经管","艺术","轨道","商务"]
+        }
+    });
+
+</script>
+</body>
+</html>

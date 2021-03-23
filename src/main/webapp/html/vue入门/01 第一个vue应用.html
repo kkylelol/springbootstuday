@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个vue应用</title>
+<!--1 引入vue-->
+    <script src="../../static/vue/vue.js"></script>
+</head>
+<body>
+<!--2 定义一个容器,用于挂载vue实例-->
+<div id="app">
+<!--    通过插值表达式渲染vue-->
+    <h1>{{message}}</h1>
+</div>
+
+<script>
+    <!--3 创建一个vue实例-->
+    const myapp = new Vue({
+        //通过el把vue实例挂在到指定容器
+        // #app id选择器
+        // .app 类选择器
+        // <  > 标签选择器
+        el:"#app",
+        data:{
+            message:"第一个Vue应用"
+        }
+    });
+
+</script>
+</body>
+</html>
